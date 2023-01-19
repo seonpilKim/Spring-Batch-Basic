@@ -19,6 +19,7 @@ import org.springframework.batch.item.data.builder.RepositoryItemReaderBuilder;
 import org.springframework.batch.item.data.builder.RepositoryItemWriterBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Sort;
 import study.spring.SpringBatchBasic.domain.account.Account;
 import study.spring.SpringBatchBasic.domain.account.AccountRepository;
@@ -53,6 +54,7 @@ public class TrMigrationJobConfig {
                 .build();
     }
 
+    @Primary
     @Bean
     @StepScope
     public RepositoryItemWriter<Account> trOrderWriter() {
