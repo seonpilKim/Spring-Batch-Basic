@@ -12,6 +12,7 @@ import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import study.spring.SpringBatchBasic.listener.JobLoggerListener;
 
 @Configuration
 @RequiredArgsConstructor
@@ -24,6 +25,7 @@ public class JobListenerJobConfig {
     public Job jobListenerJob(Step jobListenerStep) {
         return jobBuilderFactory.get("jobListenerJob")
                 .incrementer(new RunIdIncrementer())
+                .listener(new JobLoggerListener())
                 .start(jobListenerStep)
                 .build();
     }
