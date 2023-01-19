@@ -26,7 +26,7 @@ import study.spring.SpringBatchBasic.domain.player.PlayerYears;
 
 @Configuration
 @RequiredArgsConstructor
-public class FileDataReadWriteConfig {
+public class FileDataReadWriteJobConfig {
 
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;

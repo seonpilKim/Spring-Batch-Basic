@@ -27,7 +27,7 @@ import study.spring.SpringBatchBasic.domain.order.OrderRepository;
 
 @Configuration
 @RequiredArgsConstructor
-public class TrMigrationConfig {
+public class TrMigrationJobConfig {
 
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
