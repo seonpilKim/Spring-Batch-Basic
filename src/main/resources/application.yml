@@ -10,6 +10,7 @@ spring:
   batch:
     job:
       names: ${job.name:NONE}
+      enabled: false # 프로젝트 구동 시점이 아닌, scheduling으로 batch를 실행시킨다.
     jdbc:
       initialize-schema: ALWAYS
   datasource:
